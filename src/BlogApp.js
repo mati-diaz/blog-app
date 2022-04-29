@@ -21,7 +21,7 @@ import { Alert } from './components/ui/Alert';
 import { NotFoundScreen } from './components/ui/NotFoundScreen';
 import { NewPost } from './components/newPost/NewPost';
 
-export const Bloggar = () => {
+export const BlogApp = () => {
     const { checking, id: uid } = useSelector(state => state.user);
     const { open } = useSelector(state => state.ui.alert);
     const { loading } = useSelector(state => state.ui);
