@@ -1,7 +1,5 @@
-const baseURL = process.env.REACT_APP_API_URL;
-
 export const noTokenFetch = (endpoint, data, method = 'GET') => {
-    const url = `${baseURL}/${endpoint}`;
+    const url = `https://blogapp-md.herokuapp.com/api/${endpoint}`;
 
     if (method === 'GET') {
         return fetch(url);
@@ -17,7 +15,7 @@ export const noTokenFetch = (endpoint, data, method = 'GET') => {
 }
 
 export const tokenFetch = (endpoint, data, method = 'GET') => {
-    const url = `${baseURL}/${endpoint}`;
+    const url = `https://blogapp-md.herokuapp.com/api/${endpoint}`;
     const token = localStorage.getItem('token') || '';
 
     if (method === 'GET') {
@@ -41,7 +39,7 @@ export const tokenFetch = (endpoint, data, method = 'GET') => {
 }
 
 export const formDataFetch = (endpoint, data, method = 'POST') => {
-    const url = `${baseURL}/${endpoint}`;
+    const url = `https://blogapp-md.herokuapp.com/api/${endpoint}`;
     const token = localStorage.getItem('token') || '';
 
     if (method === 'POST') {
