@@ -1,0 +1,350 @@
+.public {
+    display: flex;
+    height: 100vh;
+}
+
+.public__content {
+    width: 100%;
+    background-color: rgb(234, 234, 234);
+    overflow: auto;
+    padding: 50px 0;
+}
+
+.public__nav {
+    background-color: $dark-grey;
+    height: 100vh;
+    padding: 30px 10px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    color: white;
+
+    .link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid $primary-color;
+        padding: 10px 20px;
+        border-radius: 30px;
+        color: $primary-color;
+        font-weight: 800;
+        transition-property: all;
+        transition-duration: .5s;
+
+        &:hover {
+            color: $white;
+            background-color: $primary-color;
+        }
+    }
+}
+
+.nav__toggle {
+    display: none;
+}
+
+.myAccount {
+    width: 100%;
+
+    .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+}
+
+.public__navImage {
+    width: 150px;
+    height: 150px;
+
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid $light-grey;
+        border-radius: 100%;
+    }
+}
+
+.public__profile {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.publicBlog {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+        font-weight: 800;
+        font-size: 36px;
+        color: $dark-grey;
+    }
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        color: $dark-grey;
+    }
+}
+
+.publicPosts {
+    margin-top: 50px;
+}
+
+.publicPost {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    align-items: flex-start;
+    gap: 15px;
+
+    .link {
+        color: $primary-color;
+        padding: 5px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $primary-color;
+            color: $white;
+        }
+    }
+}
+
+.publicPost__img {
+    max-width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.publicPost__date {
+    font-size: 16px;
+    color: $dark-grey;
+}
+
+.publicPost__title {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.comments {
+    .link {
+        color: $primary-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        padding: 0;
+    }
+}
+
+.comment {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-top: 1px solid $light-grey;
+    padding: 20px 5px;
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
+}
+
+.comment__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment__extras {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+        background-color: $danger-color;
+        border-radius: 100%;
+        border: none;
+        color: $white;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.comment__user {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.comments__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    button {
+        width: 200px;
+    }
+}
+
+// public profile
+.publicProfile {
+    min-height: 100vh;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 15px solid $primary-color;
+    gap: 50px;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-color;
+    padding: 50px;
+    border-radius: 5px;
+    color: $white;
+
+    img {
+        width: 150px;
+        height: 150px;
+        border: 3px solid $light-grey;
+        border-radius: 100%;
+    }
+}
+
+.profileExtras {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.profileExtras__description {
+    margin-top: 20px;
+}
+
+.profileExtras__blogs {
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        color: $primary-color;
+        cursor: pointer;
+        margin-top: 10px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// public post
+.postPublic {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 20px;
+    min-height: 100%;
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+.postPublic__img {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 30px 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.comments {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    .public__nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        transition-property: left;
+        transition-duration: .5s;
+        padding-top: 80px;
+    }
+
+    .public__nav--show {
+        left: 0;
+    }
+
+    .public__content {
+        padding-top: 50px;
+    }
+
+    .nav__toggle {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        top: 0px;
+        left: 0px;
+        color: black;
+        background-color: rgb(234, 234, 234);
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .publicProfile {
+        flex-direction: column;
+    }
+}

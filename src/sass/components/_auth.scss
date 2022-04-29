@@ -1,0 +1,78 @@
+.authScreen {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+    background-image: url('../../background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.authScreen__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.642);
+    padding: 20px;
+    color: white;
+    position: relative;
+}
+
+.authScreen__logo {
+    max-width: 100px;
+}
+
+.authScreen__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    background-color: $white;
+    padding: 20px;
+}
+
+.authScreen__title, .authScreen__description {
+    text-align: center;
+}
+
+.authFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    .link {
+        color: $primary-color;
+    }
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 15px;
+}
+
+.authForm__input {
+    padding: 10px;
+}
+
+@media (max-width: 992px) {
+    .authScreen__logo {
+        max-width: 100px;
+    }
+    .authScreen {
+        flex-direction: column;
+    }
+    .authScreen__info {
+        height: 100%;
+    }
+    .authScreen__form {
+        width: 100%;
+    }
+}

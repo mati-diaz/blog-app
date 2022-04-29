@@ -1,0 +1,17 @@
+@import './base/normalize';
+@import './base/settings';
+@import './base/base';
+
+// Components
+@import './components/auth';
+@import './components/alert';
+@import './components/navbar';
+@import './components/home';
+@import './components/modal';
+@import './components/newPost';
+@import './components/config';
+@import './components/loading';
+@import './components/posts';
+@import './components/profile';
+@import './components/public';
+
