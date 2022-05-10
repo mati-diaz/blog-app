@@ -74,6 +74,14 @@ export const Navbar = () => {
         navigate('/new');
     }
 
+    const myBlogNavigate = () => {
+        if (Object.keys(activeBlog).length === 0) {
+            return dispatch(openAlert('error', 'Primero tienes que crear un blog'));
+        }
+
+        navigate(`/public/blog/${ activeBlog.id }`);
+    }
+
     return (
         <>
             {
@@ -175,16 +183,17 @@ export const Navbar = () => {
                         Configuración
                     </NavLink>
 
-                    <a 
-                        className='navbar__link' href={ `/public/blog/${ activeBlog.id }` }
+                    <button 
+                        className='navbar__link openBlog'
                         target='_blank'
                         rel='noreferrer'
+                        onClick={ myBlogNavigate }
                     >
                         <span className="material-icons">
                             open_in_new
                         </span>
                         Ver Blog
-                    </a>
+                    </button>
 
                     <div className='navbar__divisor'></div>
 
